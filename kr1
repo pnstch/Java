@@ -1,0 +1,168 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        //1.1
+        System.out.println("1.1");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите 1 строку");
+        String str1 = scan.nextLine();
+        System.out.println("Введите 2 строку");
+        String str2 = scan.nextLine();
+        System.out.println("Строки равны без учета регистра "+str1.equalsIgnoreCase(str2));
+        System.out.println("Строки равны c учетом регистра "+str1.equals(str2));
+        //1.2
+        System.out.println("1.2");
+        System.out.println("Введите строку");
+        String str3 = scan.nextLine();
+        var result = str3.charAt(str3.length()-1);
+        System.out.println(result);
+        //1.3
+        System.out.println("1.3");
+        System.out.println("Введите 3 строки");
+        String str4 = scan.nextLine();
+        String str5 = scan.nextLine();
+        String str6 = scan.nextLine();
+        System.out.println("1 строка "+str4.toLowerCase());
+        System.out.println("2 строка "+str5.toUpperCase());
+        System.out.println("3 строка "+str6);
+        //1.4
+        System.out.println("1.4");
+        System.out.println("Введите 2 строчки");
+        String str7 = scan.nextLine();
+        String str8 = scan.nextLine();
+        System.out.println(str7.toUpperCase()+str8.toUpperCase());
+        //1.5
+        System.out.println("1.5");
+        System.out.println("Введите строку");
+        String str9 = scan.nextLine();
+        System.out.println(str9.replaceAll("[^0-9]",""));
+        //1.6
+        System.out.println("1.6");
+        System.out.println("Введите строку");
+        String str10 = scan.nextLine();
+        System.out.println(str10.endsWith("!!!"));
+        //1.7
+        System.out.println("1.7");
+        System.out.println("Введите строчку");
+        String str11 = scan.nextLine();
+        System.out.println(str11.startsWith("!!!"));
+        //1.8
+        System.out.println("1.8");
+        System.out.println("Введите строку");
+        String str12 = scan.nextLine();
+        System.out.println(str12.contains("!!!"));
+        //1.9
+        System.out.println("1.9");
+        System.out.println("Введите строку");
+        String str13 = scan.nextLine();
+        System.out.println(str13.replace("a","b"));
+        //2.1
+        System.out.println("2.1");
+        System.out.println("Введите 2 числа");
+        int value1 = scan.nextInt();
+        int value2 = scan.nextInt();
+        if(value1 > value2)
+            System.out.println(value2);
+        else
+            System.out.println(value1);
+        //2.2
+        System.out.println("2.2");
+        System.out.println("Введите 2 числа");
+        int value3 = scan.nextInt();
+        int value4 = scan.nextInt();
+        if(value3 > value4)
+            System.out.println(value3);
+        else
+            System.out.println(value4);
+        //2.3
+        System.out.println("2.3");
+        System.out.println("Введите  число");
+        int value5 = scan.nextInt();
+        if(value5 % 2 == 0)
+            System.out.println("чётное");
+        else
+            System.out.println("нечётное");
+        //2.4
+        System.out.println("2.4");
+        System.out.println("Введите  3 числа");
+        int value6 = scan.nextInt();
+        int value7 = scan.nextInt();
+        int value8 = scan.nextInt();
+
+        if ((value6 - value7) * (value8 - value6) >= 0) {              // a >= b and a <= c OR a <= b and a >= c
+            System.out.println(value6);
+        } else if ((value7 - value6) * (value8 - value7) >= 0) {       // b >= a and b <= c OR b <= a and b >= c
+            System.out.println(value7);
+        } else {
+            System.out.println(value8);
+        }
+        //2.5
+        System.out.println("2.5");
+        double a, b, c;
+        double D;
+
+        System.out.println("Введите a, b и c:");
+
+        a = scan.nextDouble();
+        b = scan.nextDouble();
+        c = scan.nextDouble();
+
+        D = b * b - 4 * a * c;
+        if (D > 0) {
+            double x1, x2;
+            x1 = (-b - Math.sqrt(D)) / (2 * a);
+            x2 = (-b + Math.sqrt(D)) / (2 * a);
+            System.out.println("Корни уравнения: x1 = " + x1 + ", x2 = " + x2);
+        }
+        else if (D == 0) {
+            double x;
+            x = -b / (2 * a);
+            System.out.println("Уравнение имеет единственный корень: x = " + x);
+        }
+        else {
+            System.out.println("Уравнение не имеет действительных корней!");
+        }
+
+        //2.6
+        System.out.println("2.6");
+        System.out.println("Введите  3 строки");
+        String one = scan.nextLine();
+        String two = scan.nextLine();
+        String three = scan.nextLine();
+
+
+        if (one.length()>two.length() && one.length()>three.length()) {
+            System.out.print(one);
+        } else if (two.length()>one.length() && two.length()>three.length()) {
+            System.out.print(two);
+        } else {
+            System.out.print(three);
+        }
+        //2.7
+        System.out.println("2.7");
+        System.out.println("Введите строку");
+        String cat = scan.nextLine();
+        if(cat.contains("cat") == true)
+            System.out.println("Y");
+        else
+            System.out.println("N");
+        //2.8
+        System.out.println("2.8");
+        System.out.println("Введите 2 числа с плавающей точкой");
+        double DouleValue1 = scan.nextDouble();
+        double DouleValue2 = scan.nextDouble();
+
+        DouleValue1 = Math.round(DouleValue1 * 1000);
+        DouleValue1 = DouleValue1 / 1000;
+        DouleValue2 = Math.round(DouleValue2 * 1000);
+        DouleValue2 = DouleValue2 / 1000;
+
+        if(DouleValue1 == DouleValue2)
+            System.out.println("Совпадают");
+        else
+            System.out.println("Не совпадают");
+    }
+}
